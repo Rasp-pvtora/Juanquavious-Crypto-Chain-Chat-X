@@ -12,7 +12,9 @@ chainchat/
 ```
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
+
 [Open-Source Juanquavious-Crypto-Chain-Chat-X](https://github.com/Rasp-pvtora/Juanquavious-Crypto-Chain-Chat-X/blob/main/LICENSE)
 
 ## Installation
@@ -42,6 +44,9 @@ The first page is the Login page.
 Is possible to import an existing login authentification key (or *drag&drop*) or create a new user.
 In this case we create a new user called **"Person_1"**
 [Create new user](./screenshots/page_login_createNew.png)
+
+<img src="./screenshots/page_login_createNew.png" alt="Create new user" width="70%">
+
 A new file inside the folder ***"users"*** will be created.
 **This is the private key and should be NEVER shared. If the key is lost is not possible to open the corresponding chats anymore!**
 
