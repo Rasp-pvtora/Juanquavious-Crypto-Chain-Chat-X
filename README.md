@@ -7,8 +7,8 @@ chainchat/
 ├── import.py           # Auto-upgrade deps
 ├── verify_settings.py  # Auto-create project folders
 ├── crypto.py           # E2EE + hashing
-├── `users/`     *(`local only`)* #folder with private keys used for login
-└── `chains/`    *(`local only`)* #folder with encripted chats
+├── `users/`            *(`local only`)* #folder with private keys used for login
+└── `chains/`           *(`local only`)* #folder with encripted chats
 ```
 
 ## License
@@ -39,13 +39,11 @@ py -m streamlit run app.py
 ## Login
 At this point the [localhost streamlit webpage](http://localhost:8501/) at the port 8501 will open automatically.
 The first page is the Login page.
-[Login Page](./screenshots/page_login.png)
 
 <img src="./screenshots/page_login.png" alt="Login Page" width="100%">
 
 Is possible to import an existing login authentification key (or *drag&drop*) or create a new user.
 In this case we create a new user called **"Person_1"**
-[Create new user](./screenshots/page_login_createNew.png)
 
 <img src="./screenshots/page_login_createNew.png" alt="Create new user" width="100%">
 
@@ -54,7 +52,6 @@ A new file inside the folder ***"users"*** will be created.
 
 
 ## Main page
-[Main Page](./screenshots/First_Login.png)
 
 <img src="./screenshots/First_Login.png" alt="[Main Page" width="100%">
 
@@ -85,8 +82,6 @@ As is possible to see in the next screenshot, Perosn_2 has a completely differen
 
 ***(scrennshot above)*** Person_2 creates a new channel (click on the button "New Channle") and will add Person_1 to the chat: 
 
-[New Empty Chat between Person_1 and Person_2](./screenshots/New_Chat_Create.png)
-
 <img src="./screenshots/New_Chat_Create.png" alt="[New Empty Chat between Person_1 and Person_2" width="100%">
 
 In the information channel section is possitle to read
@@ -102,7 +97,6 @@ This means that the chat is called ***89bd14db*** and 2 people are invited in th
 
 ## Write a new message inside the chat
 At this point is possible to write a new message inside the chat:
-[Write a new message](./screenshots/New_Chat_Message.png)
 
 <img src="./screenshots/New_Chat_Message.png" alt="[Write a new message" width="100%">
 
@@ -116,8 +110,6 @@ below the encripted message will appear:
 ```bash
 mlkVvM+bEtntP3CzSg0OsaKhI1CIWEGPvChTk7Ibp3Rf+xD38yNAn1LxkMSHGlawvKN85Lo5W+QgezZy/eqzxe5wA980khhsGUnrItFYCLUCvbymf+f+3Mzxx7/Pa/CpyJUotRRR00phPqwFXjwVuEMBxBKYCB1dtSs2TClbG23OYmlD4FyK+6/UIQHECg==
 ```
-
-[Encirpt the message](./screenshots/Encript_Message.png)
 
 <img src="./screenshots/Encript_Message.png" alt="[Encirpt the message" width="100%">
 
@@ -139,15 +131,11 @@ Is easy to see!
 Open the chat and type anything! Each time you change your message the "**Message Hash ID**" and the "**Encription Message**" are changing.
 Also if you press any button! If you press the button "Save" or "Export Chain" the encription message will always change!
 
-[Decript the message with Hash 1](./screenshots/Decript_Message.png)
-
 <img src="./screenshots/Decript_Message.png" alt="[New Chat" width="100%">
 
 You can also try to decript the encripted message, you will see that you have the same result!
 
-[Decript the message with Hash 2](./screenshots/Encript_Message2.png)
-
-<img src="./screenshots/Encript_Message2.png" alt="[Decript the message with Hash 2]" width="100%">
+<img src="./screenshots/Decript_Message2.png" alt="[Decript the message with Hash 2]" width="100%">
 
 ## Offline chat communication
 As already explained in the previous point, the person involved in the chat have to exchange physically the .chain file!
@@ -157,7 +145,6 @@ Only the person with the private key can open the chat file and decript the mess
 This because inside the encripted chat at the beginning are listed the public key of the members! and only the right private key can generate the right public key! **One Way encription!**
 In order to read the encripted chat, the software checks if the private key used to login and to open the chat can generate one of the listed public key. If this operation is done successfully, than is possible to open the encripted chat, read the data inside and write a new message!
 
-[Decript a message](./screenshots/Decript_Message.png)
 <img src="./screenshots/Decript_Message.png" alt="Decript a message" width="100%">
 
 A **possible hacker attack** can be possible only brute forcing the private keys and try at least 1 of the listed public key! if the hacker finds 1 private key that correspond to the 1 listed public key, than the attacker has the right to read the chat and write me a message with the stolen key.
