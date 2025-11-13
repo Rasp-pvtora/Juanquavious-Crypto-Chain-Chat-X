@@ -7,8 +7,8 @@ chainchat/
 ├── import.py           # Auto-upgrade deps
 ├── verify_settings.py  # Auto-create project folders
 ├── crypto.py           # E2EE + hashing
-├── `users/`            *(`local only`)* #folder with private keys used for login
-└── `chains/`           *(`local only`)* #folder with encripted chats
+├── `users/`     *(`local only`)* #folder with private keys used for login
+└── `chains/`    *(`local only`)* #folder with encripted chats
 ```
 
 ## License
@@ -82,9 +82,6 @@ As is possible to see in the next screenshot, Perosn_2 has a completely differen
 "64-char Pubblic Key Person_2:" 170f6fbbdb1a16086d0087cab34ef9fee62da5697d0523d9e163ed9ee4d35668
 ```
 
-[New Chat](./screenshots/New_Chat.png)
-
-<img src="./screenshots/New_Chat.png" alt="[New Chat" width="100%">
 
 ***(scrennshot above)*** Person_2 creates a new channel (click on the button "New Channle") and will add Person_1 to the chat: 
 
