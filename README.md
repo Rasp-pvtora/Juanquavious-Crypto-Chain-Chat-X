@@ -7,8 +7,8 @@ chainchat/
 ├── import.py           # Auto-upgrade deps
 ├── verify_settings.py  # Auto-create project folders
 ├── crypto.py           # E2EE + hashing
-├── `***users/***`     *(local only)* #folder with private keys used for login
-└── `***chains/***`     *(local only)* #folder with encripted chats
+├── `users/`            *(`local only`)* #folder with private keys used for login
+└── `chains/`           *(`local only`)* #folder with encripted chats
 ```
 
 ## License
@@ -41,11 +41,13 @@ At this point the [localhost streamlit webpage](http://localhost:8501/) at the p
 The first page is the Login page.
 [Login Page](./screenshots/page_login.png)
 
+<img src="./screenshots/page_login.png" alt="Login Page" width="100%">
+
 Is possible to import an existing login authentification key (or *drag&drop*) or create a new user.
 In this case we create a new user called **"Person_1"**
 [Create new user](./screenshots/page_login_createNew.png)
 
-<img src="./screenshots/page_login_createNew.png" alt="Create new user" width="70%">
+<img src="./screenshots/page_login_createNew.png" alt="Create new user" width="100%">
 
 A new file inside the folder ***"users"*** will be created.
 **This is the private key and should be NEVER shared. If the key is lost is not possible to open the corresponding chats anymore!**
@@ -53,6 +55,9 @@ A new file inside the folder ***"users"*** will be created.
 
 ## Main page
 [Main Page](./screenshots/First_Login.png)
+
+<img src="./screenshots/First_Login.png" alt="[Main Page" width="100%">
+
 On the right side is possible to read the account information. Is also possible to **modify the "Nickname"** or you can leave the pseudo-nickname automatically generated. This is the Nickname used to sign the messages inside the chat.
 The other user inside the chat will read your message and your Nickname (if you want to remain anonymous the best is to leave a pseudo-nickname).
 The left side is for manage the Chats. Is possible to **import an existing chat file** (.chain) or create a new chat.
@@ -79,9 +84,13 @@ As is possible to see in the next screenshot, Perosn_2 has a completely differen
 
 [New Chat](./screenshots/New_Chat.png)
 
+<img src="./screenshots/New_Chat.png" alt="[New Chat" width="100%">
+
 ***(scrennshot above)*** Person_2 creates a new channel (click on the button "New Channle") and will add Person_1 to the chat: 
 
 [New Empty Chat between Person_1 and Person_2](./screenshots/New_Chat_Create.png)
+
+<img src="./screenshots/New_Chat_Create.png" alt="[New Empty Chat between Person_1 and Person_2" width="100%">
 
 In the information channel section is possitle to read
 ```bash
@@ -98,6 +107,8 @@ This means that the chat is called ***89bd14db*** and 2 people are invited in th
 At this point is possible to write a new message inside the chat:
 [Write a new message](./screenshots/New_Chat_Message.png)
 
+<img src="./screenshots/New_Chat_Message.png" alt="[Write a new message" width="100%">
+
 ```bash
 "Hello, i am Person_2 and i am writing this message with Nickname dca92b7f.
 Who is reading this message?"
@@ -110,6 +121,8 @@ mlkVvM+bEtntP3CzSg0OsaKhI1CIWEGPvChTk7Ibp3Rf+xD38yNAn1LxkMSHGlawvKN85Lo5W+QgezZy
 ```
 
 [Encirpt the message](./screenshots/Encript_Message.png)
+
+<img src="./screenshots/Encript_Message.png" alt="[Encirpt the message" width="100%">
 
 Now is possible to Save the encripted message inside the Chat file.
 The file is located automatically inside the folder "**chains**".
@@ -131,9 +144,13 @@ Also if you press any button! If you press the button "Save" or "Export Chain" t
 
 [Decript the message with Hash 1](./screenshots/Decript_Message.png)
 
+<img src="./screenshots/Decript_Message.png" alt="[New Chat" width="100%">
+
 You can also try to decript the encripted message, you will see that you have the same result!
 
 [Decript the message with Hash 2](./screenshots/Encript_Message2.png)
+
+<img src="./screenshots/Encript_Message2.png" alt="[Decript the message with Hash 2]" width="100%">
 
 ## Offline chat communication
 As already explained in the previous point, the person involved in the chat have to exchange physically the .chain file!
@@ -143,7 +160,8 @@ Only the person with the private key can open the chat file and decript the mess
 This because inside the encripted chat at the beginning are listed the public key of the members! and only the right private key can generate the right public key! **One Way encription!**
 In order to read the encripted chat, the software checks if the private key used to login and to open the chat can generate one of the listed public key. If this operation is done successfully, than is possible to open the encripted chat, read the data inside and write a new message!
 
-[Write a new message](./screenshots/Decript_Message.png)
+[Decript a message](./screenshots/Decript_Message.png)
+<img src="./screenshots/Decript_Message.png" alt="Decript a message" width="100%">
 
 A **possible hacker attack** can be possible only brute forcing the private keys and try at least 1 of the listed public key! if the hacker finds 1 private key that correspond to the 1 listed public key, than the attacker has the right to read the chat and write me a message with the stolen key.
 
