@@ -7,6 +7,7 @@ chainchat/
 ├── import.py           # Auto-upgrade deps
 ├── verify_settings.py  # Auto-create folders
 ├── crypto.py           # E2EE + hashing
-├── users/
+├── `users/`    *(local only)*
 ├── chains/
 └── imports/
+
